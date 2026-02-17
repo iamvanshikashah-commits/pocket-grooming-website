@@ -382,6 +382,10 @@
     gap: 60px;
   }
 
+  .product-image-container {
+    padding: 60px;
+  }
+
   .system-number {
     font-size: 56px;
   }
@@ -434,6 +438,10 @@
 
   .btn-text-link {
     color: rgba(255, 255, 255, 0.95);
+  }
+
+  .product-image-container {
+    padding: 40px 20px;
   }
 
   .system-item {
