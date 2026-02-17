@@ -18,7 +18,7 @@ const Home = () => {
       <section className="hero-section section-padding-large">
         <div className="container">
           <p className="eyebrow">{hero.eyebrow}</p>
-          <h1 className="hero-large !font-['Georgia'] !text-3xl mt-md">{hero.headline}</h1>
+          <h1 className="hero-large !text-4xl mt-md">{hero.headline}</h1>
           <p className="hero-medium mt-lg">{hero.subheadline}</p>
           <p className="body-large !font-light !italic mt-md" style={{ maxWidth: '600px' }}>
             {hero.description}
