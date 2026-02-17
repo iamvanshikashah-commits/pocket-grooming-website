@@ -126,12 +126,13 @@ const Home = () => {
             </div>
 
             <div className="product-preview-media">
-              <div className="media-placeholder">
-                <p className="body-small" style={{ color: 'var(--text-light)' }}>
-                  [Product render]<br />
-                  Recommended: 600×800px<br />
-                  Aspect ratio: 3:4
-                </p>
+              <div className="product-image-container">
+                <img
+                  src="https://customer-assets.emergentagent.com/job_pocket-grooming/artifacts/7pgj4xf2_ChatGPT%20Image%20Feb%2017%2C%202026%2C%2004_39_36%20PM.png"
+                  alt="Pocket Shaving Foam Product"
+                  className="product-render-image"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>
