@@ -179,7 +179,7 @@ export const mockData = {
     ],
     vision: {
       title: 'System Vision',
-      description: 'The Micro-Aerosol System establishes a new grooming platform. Pocket Shaving Foam (PSF) is the foundation—a category-defining product that proves micro-format viability. Future releases will expand the ecosystem while maintaining the same engineering principles: compact, consistent, premium.',
+      description: 'The Micro-Aerosol System establishes a new grooming platform. Pocket Shaving Foam (PSF) is the foundation: a category-defining product that proves micro-format viability. Future releases will expand the ecosystem while maintaining the same engineering principles: compact, consistent, premium.',
       note: 'PSF is the first release in the Pocket Grooming ecosystem.'
     }
   },
