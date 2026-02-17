@@ -1,0 +1,73 @@
+/* About Page Styles */
+
+.about-page {
+  background: var(--bg-primary);
+}
+
+/* Hero */
+.about-hero-section {
+  text-align: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Heritage Section */
+.heritage-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.heritage-header {
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* Capability Section */
+.capability-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.capability-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  padding: 40px;
+  transition: transform 0.2s ease;
+}
+
+.capability-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Pocket Section */
+.pocket-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* CTA */
+.about-cta-section {
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .capability-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .capability-card {
+    padding: 32px;
+  }
+}
