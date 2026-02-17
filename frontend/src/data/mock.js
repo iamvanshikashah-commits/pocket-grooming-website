@@ -193,8 +193,8 @@ export const mockData = {
     heritage: {
       title: 'Jaivanti Cosmetics',
       established: 'Established 1990',
-      description: 'For over three decades, Jaivanti Cosmetics has been a trusted partner to India\'s premium hospitality sector. Our expertise spans hotel amenity manufacturing, institutional supply, and large-scale distribution. We understand the standards that premium properties demand: consistency, quality, and operational reliability.',
-      focus: 'Our manufacturing capabilities and supply chain infrastructure serve hospitality groups, airlines, and institutional clients nationwide. Every product reflects our commitment to precision and partnership.'
+      description: 'For over three decades, Jaivanti Cosmetics has supported hospitality and institutional businesses with dependable manufacturing and structured supply across East India. Our work spans hotel amenities, bulk production, and large-scale distribution.',
+      focus: 'We focus on consistency, controlled quality, and operational reliability — ensuring every product delivered meets the practical demands of real-world use. Precision and long-term partnership remain central to our approach.'
     },
     capability: {
       title: 'Manufacturing & Supply',
