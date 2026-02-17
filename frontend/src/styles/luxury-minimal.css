@@ -1,0 +1,345 @@
+/* Luxury Minimalist Design System for Pocket */
+
+/* ============================================
+   FOUNDATION COLORS - Warm Neutral Palette
+   ============================================ */
+:root {
+  /* Primary Backgrounds - Warm foundation */
+  --bg-primary: #fffef2;
+  --bg-secondary: #f6f5e8;
+  --bg-subtle: #ebeade;
+  --bg-dark: #000000;
+  
+  /* Text Hierarchy - Rich contrast */
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-light: #bcbbb4;
+  --text-meta: #4a4a4a;
+  --text-white: #ffffff;
+  
+  /* Interactive States - Minimal emphasis */
+  --interactive-base: #333333;
+  --interactive-hover: #000000;
+  --focus-outline: #252525;
+  
+  /* Borders & Separators */
+  --border-light: #bcbbb4;
+  --border-medium: #cccccc;
+  --border-subtle: rgba(51, 51, 51, 0.2);
+  
+  /* Status Colors - Muted */
+  --status-error: #ba3e2b;
+  --status-success: #4a4a4a;
+}
+
+/* ============================================
+   TYPOGRAPHY SYSTEM
+   ============================================ */
+
+/* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+}
+
+.hero-large {
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.hero-medium {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+.heading-1 {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+.heading-2 {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--text-primary);
+}
+
+.heading-3 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+.body-large {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--text-primary);
+}
+
+.body-regular {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+.body-small {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+/* ============================================
+   BUTTONS - Sharp, Minimal Design
+   ============================================ */
+
+.btn-primary {
+  background: transparent;
+  color: var(--interactive-base);
+  border: 1px solid var(--interactive-base);
+  border-radius: 0px;
+  padding: 19px 32px;
+  min-width: 210px;
+  height: 60px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.02em;
+}
+
+.btn-primary:hover {
+  background: var(--interactive-base);
+  color: var(--bg-primary);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  background: var(--interactive-hover);
+  color: var(--bg-primary);
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background: none;
+  border: none;
+  padding: 12px 0;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  color: var(--interactive-base);
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.btn-secondary:after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--interactive-base);
+  transition: width 0.4s ease-in-out;
+}
+
+.btn-secondary:hover:after {
+  width: 100%;
+}
+
+/* ============================================
+   LAYOUT SYSTEM
+   ============================================ */
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+.container-wide {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+.section-padding {
+  padding: 120px 0;
+}
+
+.section-padding-large {
+  padding: 160px 0;
+}
+
+.section-padding-small {
+  padding: 80px 0;
+}
+
+/* ============================================
+   SPACING SYSTEM
+   ============================================ */
+
+.space-xs { margin: 8px; }
+.space-sm { margin: 16px; }
+.space-md { margin: 24px; }
+.space-lg { margin: 32px; }
+.space-xl { margin: 48px; }
+.space-xxl { margin: 80px; }
+
+.mt-xs { margin-top: 8px; }
+.mt-sm { margin-top: 16px; }
+.mt-md { margin-top: 24px; }
+.mt-lg { margin-top: 32px; }
+.mt-xl { margin-top: 48px; }
+.mt-xxl { margin-top: 80px; }
+
+.mb-xs { margin-bottom: 8px; }
+.mb-sm { margin-bottom: 16px; }
+.mb-md { margin-bottom: 24px; }
+.mb-lg { margin-bottom: 32px; }
+.mb-xl { margin-bottom: 48px; }
+.mb-xxl { margin-bottom: 80px; }
+
+/* ============================================
+   DIVIDERS & BORDERS
+   ============================================ */
+
+.divider-thin {
+  height: 1px;
+  background: var(--border-light);
+  border: none;
+  margin: 0;
+}
+
+.divider-medium {
+  height: 1px;
+  background: var(--border-medium);
+  border: none;
+  margin: 0;
+}
+
+/* ============================================
+   ANIMATIONS & INTERACTIONS
+   ============================================ */
+
+.transition-smooth {
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.transition-slow {
+  transition: all 0.5s ease-in-out;
+}
+
+.hover-lift {
+  transition: transform 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .container,
+  .container-wide {
+    padding: 0 40px;
+  }
+  
+  .hero-large {
+    font-size: 56px;
+  }
+  
+  .hero-medium {
+    font-size: 40px;
+  }
+  
+  .heading-1 {
+    font-size: 32px;
+  }
+  
+  .section-padding {
+    padding: 80px 0;
+  }
+  
+  .section-padding-large {
+    padding: 120px 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .container,
+  .container-wide {
+    padding: 0 20px;
+  }
+  
+  .hero-large {
+    font-size: 40px;
+  }
+  
+  .hero-medium {
+    font-size: 32px;
+  }
+  
+  .heading-1 {
+    font-size: 28px;
+  }
+  
+  .heading-2 {
+    font-size: 24px;
+  }
+  
+  .section-padding {
+    padding: 60px 0;
+  }
+  
+  .section-padding-large {
+    padding: 80px 0;
+  }
+  
+  .section-padding-small {
+    padding: 40px 0;
+  }
+  
+  .btn-primary {
+    min-width: 100%;
+    padding: 18px 24px;
+  }
+}
