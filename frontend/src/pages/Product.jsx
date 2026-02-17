@@ -32,12 +32,29 @@ const Product = () => {
             </div>
 
             <div className="product-hero-media">
-              <div className="media-placeholder">
-                <p className="body-small" style={{ color: 'var(--text-light)' }}>
-                  [Product hero render or loop video]<br />
-                  Recommended: 800×1000px<br />
-                  Aspect ratio: 4:5
-                </p>
+              <div className="product-video-wrapper">
+                <video
+                  className="product-hero-video"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="auto"
+                  poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 1000'%3E%3Crect fill='%23EAEAE7' width='800' height='1000'/%3E%3C/svg%3E"
+                  onClick={(e) => {
+                    if (e.currentTarget.muted) {
+                      e.currentTarget.muted = false;
+                    } else {
+                      e.currentTarget.muted = true;
+                    }
+                  }}
+                >
+                  <source
+                    src="https://customer-assets.emergentagent.com/job_pocket-grooming/artifacts/fk5pjpod_Gen%20z%20%28corrected%29.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
           </div>
