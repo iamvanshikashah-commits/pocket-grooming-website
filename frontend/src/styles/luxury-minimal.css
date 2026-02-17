@@ -18,14 +18,14 @@
   --text-white: #ffffff;
   
   /* Interactive States - Minimal emphasis */
-  --interactive-base: #333333;
+  --interactive-base: #111111;
   --interactive-hover: #000000;
-  --focus-outline: #252525;
+  --focus-outline: #000000;
   
   /* Borders & Separators */
-  --border-light: #bcbbb4;
-  --border-medium: #cccccc;
-  --border-subtle: rgba(51, 51, 51, 0.2);
+  --border-light: rgba(17, 17, 17, 0.08);
+  --border-medium: rgba(17, 17, 17, 0.12);
+  --border-subtle: rgba(17, 17, 17, 0.06);
   
   /* Status Colors - Muted */
   --status-error: #ba3e2b;
