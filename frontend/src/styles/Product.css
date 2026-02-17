@@ -1,0 +1,176 @@
+/* Product Page Styles */
+
+.product-page {
+  background: var(--bg-primary);
+}
+
+/* Product Hero */
+.product-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 120px;
+  align-items: center;
+}
+
+.product-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.spec-chip {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.product-hero-media .media-placeholder {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  aspect-ratio: 4/5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+}
+
+/* Quality Section */
+.quality-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.quality-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  padding: 40px;
+  transition: transform 0.2s ease;
+}
+
+.quality-card:hover {
+  transform: translateY(-2px);
+}
+
+.foam-media .media-placeholder {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  aspect-ratio: 2/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+}
+
+/* System Section */
+.system-content-product {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Specifications */
+.specs-table {
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid var(--border-light);
+  background: var(--bg-secondary);
+}
+
+.spec-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.spec-row:last-child {
+  border-bottom: none;
+}
+
+.spec-label,
+.spec-value {
+  padding: 24px 32px;
+}
+
+.spec-label {
+  font-weight: 600;
+  border-right: 1px solid var(--border-light);
+  background: var(--bg-primary);
+}
+
+/* Scenarios */
+.scenarios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.scenario-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  padding: 40px;
+  transition: transform 0.2s ease;
+}
+
+.scenario-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Product CTA */
+.product-cta-section {
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Utilities */
+.text-center {
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .product-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .quality-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .scenarios-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .spec-row {
+    grid-template-columns: 1fr;
+  }
+
+  .spec-label {
+    border-right: none;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .spec-label,
+  .spec-value {
+    padding: 16px 20px;
+  }
+
+  .quality-card,
+  .scenario-card {
+    padding: 32px;
+  }
+}

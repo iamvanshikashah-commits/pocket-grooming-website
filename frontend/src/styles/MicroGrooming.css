@@ -1,0 +1,124 @@
+/* Micro Grooming Page Styles */
+
+.micro-grooming-page {
+  background: var(--bg-primary);
+}
+
+/* Hero */
+.mg-hero-section {
+  text-align: center;
+}
+
+/* The Shift Section */
+.shift-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+.shift-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  padding: 48px;
+}
+
+.shift-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.shift-list li {
+  padding-left: 24px;
+  position: relative;
+}
+
+.shift-list li:before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--text-light);
+}
+
+/* Pillars Section */
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.pillar-card {
+  padding: 48px;
+  border-right: 1px solid var(--border-light);
+  position: relative;
+}
+
+.pillar-card:last-child {
+  border-right: none;
+}
+
+.pillar-header {
+  position: relative;
+}
+
+.pillar-divider-vert {
+  position: absolute;
+  top: 50%;
+  right: -24px;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 40px;
+  background: var(--border-light);
+}
+
+/* Vision Section */
+.vision-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* CTA */
+.mg-cta-section {
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .shift-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .pillar-card {
+    border-right: none;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .pillar-card:last-child {
+    border-bottom: none;
+  }
+
+  .pillar-divider-vert {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .shift-card,
+  .pillar-card {
+    padding: 32px;
+  }
+}
