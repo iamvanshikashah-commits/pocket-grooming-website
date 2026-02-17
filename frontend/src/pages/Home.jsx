@@ -25,19 +25,19 @@ const Home = () => {
             loop
             playsInline
             preload="auto"
-            poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect fill='%23F4F4F2' width='1920' height='1080'/%3E%3C/svg%3E"
-          >
+            poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect fill='%23F4F4F2' width='1920' height='1080'/%3E%3C/svg%3E">
+
             <source
               src="https://customer-assets.emergentagent.com/job_pocket-grooming/artifacts/ekli3eph_Gen-4_5%20Controlled%20high-density%20fluid%20motion%2C%20slow%20twisting%20vortex%20movement%20inspired%20by%20air-dispersion%20engineering%20Heavy%20sculptural%20folds%20glide%20past%20each%20other%20with%20tension%20and%20precision%20Subtle%20ligh.gen-4_5%20controlled%20high-density%20fluid%20mot.mp4"
-              type="video/mp4"
-            />
+              type="video/mp4" />
+
           </video>
           <div className="hero-video-overlay"></div>
         </div>
 
         {/* Hero Content */}
         <div className="container hero-content-wrapper">
-          <p className="eyebrow">{hero.eyebrow}</p>
+          <p className="eyebrow !bg-[#FFFFFF]">{hero.eyebrow}</p>
           <h1 className="hero-display">{hero.headline}</h1>
           <p className="hero-subheadline">{hero.subheadline}</p>
           <p className="hero-body" style={{ maxWidth: '600px' }}>
@@ -45,12 +45,12 @@ const Home = () => {
           </p>
           
           <div className="hero-pillars">
-            {hero.pillars.map((pillar, index) => (
-              <React.Fragment key={index}>
+            {hero.pillars.map((pillar, index) =>
+            <React.Fragment key={index}>
                 <span className="pillar-text">{pillar}</span>
                 {index < hero.pillars.length - 1 && <span className="pillar-divider">|</span>}
               </React.Fragment>
-            ))}
+            )}
           </div>
 
           <div className="hero-actions">
