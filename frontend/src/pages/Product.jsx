@@ -88,16 +88,18 @@ const Product = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div className="foam-media mt-xxl">
-            <div className="media-placeholder">
-              <p className="body-small" style={{ color: 'var(--text-light)' }}>
-                [Foam macro image]<br />
-                Recommended: 1200×600px<br />
-                Aspect ratio: 2:1
-              </p>
-            </div>
-          </div>
+      {/* Product Image Section - Full Width */}
+      <section className="product-image-section">
+        <div className="product-image-wrapper">
+          <img
+            src="https://customer-assets.emergentagent.com/job_pocket-grooming/artifacts/6zjdkepz_ChatGPT%20Image%20Feb%2017%2C%202026%2C%2004_45_39%20PM.png"
+            alt="Pocket Shaving Foam Product"
+            className="product-full-image"
+            loading="lazy"
+          />
         </div>
       </section>
 
