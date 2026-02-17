@@ -39,7 +39,7 @@ const Product = () => {
                   muted
                   loop
                   playsInline
-                  preload="auto"
+                  preload="metadata"
                   poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 1000'%3E%3Crect fill='%23EAEAE7' width='800' height='1000'/%3E%3C/svg%3E"
                   onClick={(e) => {
                     if (e.currentTarget.muted) {
@@ -48,6 +48,12 @@ const Product = () => {
                       e.currentTarget.muted = true;
                     }
                   }}
+                  onError={(e) => {
+                    console.log('Video failed to load, showing fallback');
+                    e.currentTarget.style.display = 'none';
+                    const fallback = e.currentTarget.nextElementSibling;
+                    if (fallback) fallback.style.display = 'flex';
+                  }}
                 >
                   <source
                     src="https://customer-assets.emergentagent.com/job_pocket-grooming/artifacts/fk5pjpod_Gen%20z%20%28corrected%29.mp4"
@@ -55,6 +61,12 @@ const Product = () => {
                   />
                   Your browser does not support the video tag.
                 </video>
+                <div className="video-fallback" style={{ display: 'none' }}>
+                  <p className="body-small" style={{ color: 'var(--text-light)' }}>
+                    [PSF Product Video]<br />
+                    Loading...
+                  </p>
+                </div>
               </div>
             </div>
           </div>
