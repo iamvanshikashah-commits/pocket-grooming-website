@@ -62,7 +62,7 @@ const Home = () => {
             </Link>
           </div>
         </div>
-        <hr className="divider-thin" style={{ maxWidth: '1600px', margin: '64px auto 0' }} />
+        <hr className="divider-thin" style={{ maxWidth: '1600px', margin: '80px auto 0' }} />
       </section>
 
       {/* Category Introduction */}
