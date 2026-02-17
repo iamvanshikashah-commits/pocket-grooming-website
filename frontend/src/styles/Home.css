@@ -6,9 +6,64 @@
 
 /* Refined Hero Section */
 .hero-section-refined {
+  position: relative;
   background: var(--bg-primary);
   padding: 102px 0;
   text-align: center;
+  overflow: hidden;
+}
+
+/* Video Background Container */
+.hero-video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  filter: brightness(0.75);
+  will-change: transform;
+}
+
+/* Dark Overlay for Readability */
+.hero-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.30);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Hero Content Wrapper - Above Video */
+.hero-content-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section-refined .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section-refined .divider-thin {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-display {
