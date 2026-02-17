@@ -6,7 +6,7 @@ export const mockData = {
   
   // Logo
   logo: {
-    url: 'https://customer-assets.emergentagent.com/job_pocket-grooming/artifacts/t33ycmit_pocket%20logo-01.png',
+    url: 'https://customer-assets.emergentagent.com/job_pocket-grooming/artifacts/g7q9vj92_pocket%20logo-01.png',
     alt: 'Pocket - Micro Grooming'
   },
   
