@@ -15,34 +15,34 @@ const Home = () => {
   return (
     <div className="home-page">
       {/* Hero Section */}
-      <section className="hero-section section-padding-large">
+      <section className="hero-section hero-section-refined">
         <div className="container">
           <p className="eyebrow">{hero.eyebrow}</p>
-          <h1 className="hero-large !text-4xl mt-md">{hero.headline}</h1>
-          <p className="hero-medium mt-lg">{hero.subheadline}</p>
-          <p className="body-large !font-light !italic mt-md" style={{ maxWidth: '600px' }}>
+          <h1 className="hero-display">{hero.headline}</h1>
+          <p className="hero-subheadline">{hero.subheadline}</p>
+          <p className="hero-body" style={{ maxWidth: '600px' }}>
             {hero.description}
           </p>
           
-          <div className="hero-pillars mt-xl">
-            {hero.pillars.map((pillar, index) =>
-            <React.Fragment key={index}>
+          <div className="hero-pillars">
+            {hero.pillars.map((pillar, index) => (
+              <React.Fragment key={index}>
                 <span className="pillar-text">{pillar}</span>
                 {index < hero.pillars.length - 1 && <span className="pillar-divider">|</span>}
               </React.Fragment>
-            )}
+            ))}
           </div>
 
-          <div className="hero-actions mt-xxl">
-            <Link to="/product" className="btn-primary">
+          <div className="hero-actions">
+            <Link to="/product" className="btn-primary-solid">
               Explore Pocket Shaving Foam
             </Link>
-            <Link to="/contact" className="btn-secondary">
+            <Link to="/contact" className="btn-text-link">
               Inquire Now
             </Link>
           </div>
         </div>
-        <hr className="divider-thin mt-xxl" style={{ maxWidth: '1600px', margin: '80px auto 0' }} />
+        <hr className="divider-thin" style={{ maxWidth: '1600px', margin: '64px auto 0' }} />
       </section>
 
       {/* Category Introduction */}
