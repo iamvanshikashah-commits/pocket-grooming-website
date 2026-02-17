@@ -280,6 +280,42 @@
   padding: 40px;
 }
 
+/* Product Image Container */
+.product-image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px;
+}
+
+.product-render-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
+  position: relative;
+}
+
+/* Subtle vignette effect */
+.product-image-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 50%,
+    rgba(244, 244, 242, 0.3) 100%
+  );
+  pointer-events: none;
+}
+
 /* Use Contexts */
 .contexts-grid {
   display: grid;
