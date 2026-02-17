@@ -223,6 +223,14 @@
     grid-template-columns: 1fr;
     gap: 24px;
   }
+
+  .product-image-section {
+    padding: 40px 0;
+  }
+
+  .product-image-wrapper {
+    padding: 0 20px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -243,5 +251,17 @@
   .quality-card,
   .scenario-card {
     padding: 32px;
+  }
+
+  .product-image-section {
+    padding: 40px 0;
+  }
+
+  .product-image-wrapper {
+    padding: 0 0;
+  }
+
+  .product-full-image {
+    object-position: center center;
   }
 }
