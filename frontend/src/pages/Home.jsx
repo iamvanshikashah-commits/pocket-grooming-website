@@ -18,19 +18,19 @@ const Home = () => {
       <section className="hero-section section-padding-large">
         <div className="container">
           <p className="eyebrow">{hero.eyebrow}</p>
-          <h1 className="hero-large mt-md">{hero.headline}</h1>
+          <h1 className="hero-large !font-['Georgia'] !text-3xl mt-md">{hero.headline}</h1>
           <p className="hero-medium mt-lg">{hero.subheadline}</p>
-          <p className="body-large mt-md" style={{ maxWidth: '600px' }}>
+          <p className="body-large !font-light !italic mt-md" style={{ maxWidth: '600px' }}>
             {hero.description}
           </p>
           
           <div className="hero-pillars mt-xl">
-            {hero.pillars.map((pillar, index) => (
-              <React.Fragment key={index}>
+            {hero.pillars.map((pillar, index) =>
+            <React.Fragment key={index}>
                 <span className="pillar-text">{pillar}</span>
                 {index < hero.pillars.length - 1 && <span className="pillar-divider">|</span>}
               </React.Fragment>
-            ))}
+            )}
           </div>
 
           <div className="hero-actions mt-xxl">
@@ -64,8 +64,8 @@ const Home = () => {
       <section className="system-section">
         <div className="system-dark-band">
           <div className="container">
-            {systemPoints.map((point, index) => (
-              <div key={index} className="system-item">
+            {systemPoints.map((point, index) =>
+            <div key={index} className="system-item">
                 <div className="system-content">
                   <h3 className="heading-3">{point.title}</h3>
                   <p className="body-regular mt-sm">{point.description}</p>
@@ -73,7 +73,7 @@ const Home = () => {
                 <div className="system-number">{point.number}</div>
                 {index < systemPoints.length - 1 && <hr className="divider-thin mt-xl mb-xl" />}
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -89,9 +89,9 @@ const Home = () => {
               </p>
               
               <ul className="product-highlights mt-xl">
-                {product.highlights.map((highlight, index) => (
-                  <li key={index} className="body-regular">{highlight}</li>
-                ))}
+                {product.highlights.map((highlight, index) =>
+                <li key={index} className="body-regular">{highlight}</li>
+                )}
               </ul>
 
               <p className="body-small mt-xl" style={{ color: 'var(--text-meta)' }}>
@@ -122,12 +122,12 @@ const Home = () => {
       <section className="use-contexts-section section-padding">
         <div className="container">
           <div className="contexts-grid">
-            {useContexts.map((context, index) => (
-              <div key={index} className="context-card">
+            {useContexts.map((context, index) =>
+            <div key={index} className="context-card">
                 <h3 className="heading-3">{context.title}</h3>
                 <p className="body-regular mt-md">{context.description}</p>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -159,8 +159,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
+
 };
 
 export default Home;
