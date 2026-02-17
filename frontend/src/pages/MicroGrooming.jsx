@@ -67,10 +67,10 @@ const MicroGrooming = () => {
         <div className="container">
           <div className="vision-content">
             <h2 className="heading-1">{vision.title}</h2>
-            <p className="body-large mt-lg">
+            <p className="vision-description">
               {vision.description}
             </p>
-            <p className="body-small mt-lg" style={{ color: 'var(--text-meta)' }}>
+            <p className="vision-note">
               {vision.note}
             </p>
           </div>
