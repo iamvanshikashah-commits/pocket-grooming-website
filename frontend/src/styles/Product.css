@@ -43,6 +43,29 @@
   padding: 40px;
 }
 
+/* Product Hero Video */
+.product-video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/5;
+  background: var(--bg-secondary);
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+}
+
+.product-hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.product-hero-video:hover {
+  opacity: 0.95;
+}
+
 /* Quality Section */
 .quality-grid {
   display: grid;
