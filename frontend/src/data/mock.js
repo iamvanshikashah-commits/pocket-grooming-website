@@ -79,7 +79,7 @@ export const mockData = {
     ],
     trust: {
       headline: 'Backed by decades of hotel amenity manufacturing.',
-      description: 'Built on Jaivanti Cosmetics\' 30+ year legacy of supplying premium hospitality properties across India.',
+      description: 'Built on Jaivanti Cosmetics Pvt. Ltd.\'s 30+ year legacy of supplying premium hospitality properties across India.',
       linkText: 'Read our story',
       linkPath: '/about'
     }
@@ -191,9 +191,9 @@ export const mockData = {
       subtitle: 'Building the future of institutional grooming.'
     },
     heritage: {
-      title: 'Jaivanti Cosmetics',
+      title: 'Jaivanti Cosmetics Pvt. Ltd.',
       established: 'Established 1990',
-      description: 'For over three decades, Jaivanti Cosmetics has supported hospitality and institutional businesses with dependable manufacturing and structured supply across East India. Our work spans hotel amenities, bulk production, and large-scale distribution.',
+      description: 'For over three decades, Jaivanti Cosmetics Pvt. Ltd. has supported hospitality and institutional businesses with dependable manufacturing and structured supply across East India. Our work spans hotel amenities, bulk production, and large-scale distribution.',
       focus: 'We focus on consistency, controlled quality, and operational reliability — ensuring every product delivered meets the practical demands of real-world use. Precision and long-term partnership remain central to our approach.'
     },
     capability: {

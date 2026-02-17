@@ -13,7 +13,7 @@ const Footer = () => {
             <h3 className="footer-title">Pocket</h3>
             <p className="footer-subtitle">Micro Grooming</p>
             <p className="body-small mt-md">
-              Built by Jaivanti Cosmetics<br />
+              Built by Jaivanti Cosmetics Pvt. Ltd.<br />
               Est. 1990
             </p>
           </div>
@@ -44,7 +44,7 @@ const Footer = () => {
 
         <div className="footer-bottom">
           <p className="body-small">
-            © {currentYear} Pocket by Jaivanti Cosmetics. All rights reserved.
+            © {currentYear} Pocket by Jaivanti Cosmetics Pvt. Ltd. All rights reserved.
           </p>
           <p className="body-small">
             Premium hospitality amenities & institutional supply.
