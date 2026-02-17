@@ -4,16 +4,16 @@
    FOUNDATION COLORS - Warm Neutral Palette
    ============================================ */
 :root {
-  /* Primary Backgrounds - Warm foundation */
-  --bg-primary: #fffef2;
-  --bg-secondary: #f6f5e8;
-  --bg-subtle: #ebeade;
+  /* Primary Backgrounds - Architectural neutrals */
+  --bg-primary: #F4F4F2;
+  --bg-secondary: #EAEAE7;
+  --bg-subtle: #E0E0DD;
   --bg-dark: #000000;
   
-  /* Text Hierarchy - Rich contrast */
-  --text-primary: #333333;
+  /* Text Hierarchy - Sharp contrast */
+  --text-primary: #111111;
   --text-secondary: #666666;
-  --text-light: #bcbbb4;
+  --text-light: #999999;
   --text-meta: #4a4a4a;
   --text-white: #ffffff;
   
@@ -43,6 +43,7 @@ body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   background-color: var(--bg-primary);
   color: var(--text-primary);
   margin: 0;

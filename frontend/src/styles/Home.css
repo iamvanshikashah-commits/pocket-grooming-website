@@ -1,12 +1,12 @@
 /* Home Page Styles */
 
 .home-page {
-  background: #FFFFFF;
+  background: var(--bg-primary);
 }
 
 /* Refined Hero Section */
 .hero-section-refined {
-  background: #FFFFFF;
+  background: var(--bg-primary);
   padding: 102px 0;
   text-align: center;
 }
@@ -120,6 +120,7 @@
 /* Category Section */
 .category-section {
   background: var(--bg-secondary);
+  border-top: 1px solid rgba(17, 17, 17, 0.08);
 }
 
 .category-content {
