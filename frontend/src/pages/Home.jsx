@@ -16,7 +16,27 @@ const Home = () => {
     <div className="home-page">
       {/* Hero Section */}
       <section className="hero-section hero-section-refined">
-        <div className="container">
+        {/* Video Background */}
+        <div className="hero-video-container">
+          <video
+            className="hero-video"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect fill='%23F4F4F2' width='1920' height='1080'/%3E%3C/svg%3E"
+          >
+            <source
+              src="https://customer-assets.emergentagent.com/job_pocket-grooming/artifacts/ekli3eph_Gen-4_5%20Controlled%20high-density%20fluid%20motion%2C%20slow%20twisting%20vortex%20movement%20inspired%20by%20air-dispersion%20engineering%20Heavy%20sculptural%20folds%20glide%20past%20each%20other%20with%20tension%20and%20precision%20Subtle%20ligh.gen-4_5%20controlled%20high-density%20fluid%20mot.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div className="hero-video-overlay"></div>
+        </div>
+
+        {/* Hero Content */}
+        <div className="container hero-content-wrapper">
           <p className="eyebrow">{hero.eyebrow}</p>
           <h1 className="hero-display">{hero.headline}</h1>
           <p className="hero-subheadline">{hero.subheadline}</p>
