@@ -1,10 +1,36 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { mockData } from '../data/mock';
 import '../styles/Product.css';
 
 const Product = () => {
   const { hero, quality, system, specifications, scenarios } = mockData.product;
+
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.2,
+      rootMargin: '0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in-visible');
+        }
+      });
+    }, observerOptions);
+
+    const imageSection = document.querySelector('.product-image-section');
+    if (imageSection) {
+      observer.observe(imageSection);
+    }
+
+    return () => {
+      if (imageSection) {
+        observer.unobserve(imageSection);
+      }
+    };
+  }, []);
 
   return (
     <div className="product-page">
