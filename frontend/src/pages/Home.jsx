@@ -102,39 +102,39 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Product Preview */}
-      <section className="product-preview-section section-padding">
-        <div className="container">
-          <div className="product-preview-grid">
-            <div className="product-preview-content">
-              <h2 className="heading-1">{product.name}</h2>
-              <p className="heading-3 mt-md" style={{ color: 'var(--text-secondary)' }}>
-                {product.size}
-              </p>
+      {/* Product Preview - Redesigned Hero */}
+      <section className="product-hero-home-section">
+        <div className="product-hero-container">
+          <div className="product-hero-layout">
+            <div className="product-hero-text">
+              <h2 className="product-hero-heading">{product.name}</h2>
+              <p className="product-hero-subheading">{product.size}</p>
               
-              <ul className="product-highlights mt-xl">
+              <div className="product-hero-divider"></div>
+              
+              <ul className="product-hero-features">
                 {product.highlights.map((highlight, index) =>
-                <li key={index} className="body-regular">{highlight}</li>
+                <li key={index}>{highlight}</li>
                 )}
               </ul>
 
-              <p className="body-small mt-xl" style={{ color: 'var(--text-meta)' }}>
+              <p className="product-hero-micro-copy">
                 {product.inquiry}
               </p>
 
-              <div className="mt-xl">
-                <Link to="/product" className="btn-primary">
-                  View Product Details
+              <div className="product-hero-cta">
+                <Link to="/product" className="btn-technical-details">
+                  View Technical Details
                 </Link>
               </div>
             </div>
 
-            <div className="product-preview-media">
-              <div className="product-image-container">
+            <div className="product-hero-image">
+              <div className="product-hero-image-wrapper">
                 <img
                   src="https://customer-assets.emergentagent.com/job_pocket-grooming/artifacts/7pgj4xf2_ChatGPT%20Image%20Feb%2017%2C%202026%2C%2004_39_36%20PM.png"
                   alt="Pocket Shaving Foam Product"
-                  className="product-render-image"
+                  className="product-hero-img"
                   loading="lazy"
                 />
               </div>
