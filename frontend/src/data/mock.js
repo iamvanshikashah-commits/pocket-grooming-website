@@ -15,6 +15,7 @@ export const mockData = {
     { label: 'Home', path: '/' },
     { label: 'Product', path: '/product' },
     { label: 'Micro Grooming', path: '/micro-grooming' },
+    { label: 'Customise', path: '/customise' },
     { label: 'About', path: '/about' },
     { label: 'Contact', path: '/contact' }
   ],
@@ -30,7 +31,7 @@ export const mockData = {
     },
     category: {
       title: 'A new format. Designed for modern movement.',
-      description: 'Micro-format grooming eliminates bulk while maximizing control. Compact engineering meets consistent output for portability without compromise. Built for modern distribution needs and refined guest experiences.'
+      description: 'Micro-format grooming eliminates bulk while maximising control. Compact engineering meets consistent output for portability without compromise. Built for modern distribution needs and refined guest experiences.'
     },
     systemPoints: [
       {
@@ -46,18 +47,18 @@ export const mockData = {
       {
         number: '3',
         title: 'Built for Hospitality Integration',
-        description: 'Designed for seamless property integration. Compact footprint optimizes inventory and presentation. Premium amenity experience that aligns with modern hospitality standards.'
+        description: 'Designed for seamless property integration. Compact footprint optimises inventory and presentation. Premium amenity experience that aligns with modern hospitality standards.'
       }
     ],
     product: {
       name: 'Pocket Shaving Foam (PSF)',
-      size: '25 ml Micro-Aerosol',
+      size: '25 ml Micro-Aerosol System',
       highlights: [
         'Dense foam output',
         'Stable consistency',
-        'Compact and travel-ready'
+        'Compact. Travel-ready.'
       ],
-      inquiry: 'Inquire for sampling & institutional supply.'
+      inquiry: 'Institutional supply & hotel partnerships available.'
     },
     useContexts: [
       {
@@ -124,7 +125,7 @@ export const mockData = {
     scenarios: [
       {
         title: 'Guest Room Integration',
-        benefit: 'Premium amenity that optimizes bathroom space and enhances presentation.'
+        benefit: 'Premium amenity that optimises bathroom space and enhances presentation.'
       },
       {
         title: 'Travel Kit Inclusion',
@@ -140,47 +141,124 @@ export const mockData = {
   // Micro Grooming page data
   microGrooming: {
     hero: {
-      title: 'MICRO GROOMING.',
-      subtitle: 'A system designed for movement, efficiency, and modern distribution.'
+      title: 'MICRO GROOMING',
+      subheadline: 'A precision-engineered system for compact hospitality distribution.',
+      description: 'Micro-format grooming eliminates bulk while preserving performance. Designed for modern supply chains, refined guest experiences, and scalable distribution.'
     },
-    shift: {
-      problem: {
-        title: 'The Problem',
-        points: [
-          'Bulk formats create storage and presentation challenges',
-          'Inconsistent amenity quality diminishes guest experience',
-          'Messy application wastes product and time',
-          'Traditional sizing conflicts with modern travel requirements'
-        ]
-      },
-      solution: {
-        title: 'The Solution',
-        points: [
-          'Micro-format design: compact, controlled, premium',
-          'Consistent output through precision engineering',
-          'Enhanced portability without performance compromise',
-          'Modern distribution model for institutional needs'
-        ]
-      }
+    industryShift: {
+      title: 'The Shift Toward Micro-Format Distribution',
+      columns: [
+        {
+          title: 'Reduced storage footprint',
+          description: 'Less inventory bulk. More efficient property management.'
+        },
+        {
+          title: 'Operational consistency',
+          description: 'Engineered output with controlled foam density and application.'
+        },
+        {
+          title: 'Modern presentation standards',
+          description: 'Compact, refined amenity formats aligned with contemporary hospitality.'
+        }
+      ]
     },
-    pillars: [
-      {
-        title: 'FORMAT',
-        description: 'Micro-aerosol architecture reduces footprint while maintaining premium output. 25 ml delivers optimal use-per-guest ratio. Compact design enhances presentation and storage efficiency.'
-      },
-      {
-        title: 'FLOW',
-        description: 'Controlled dispensing system ensures consistent foam density. Precision valve technology eliminates waste and maintains quality. Reliable performance from first application to last.'
-      },
-      {
-        title: 'FUNCTION',
-        description: 'Engineered for institutional integration. TSA-compliant sizing for travel contexts. Premium grooming experience in a format built for modern hospitality and distribution needs.'
-      }
-    ],
     vision: {
       title: 'System Vision',
-      description: 'The Micro-Aerosol System establishes a new grooming platform. Pocket Shaving Foam (PSF) is the foundation: a category-defining product that proves micro-format viability. Future releases will expand the ecosystem while maintaining the same engineering principles: compact, consistent, premium.',
-      note: 'PSF is the first release in the Pocket Grooming ecosystem.'
+      description: 'The Micro-Aerosol System establishes a new grooming platform for modern distribution. Pocket Shaving Foam (PSF) serves as the foundation, validating the viability of micro-format engineering. Future releases will expand the ecosystem while maintaining the same principles: compact design, consistent output, premium execution.',
+      statement: 'PSF is the inaugural release in the evolving Pocket Grooming system.'
+    },
+    system: {
+      title: 'The Micro Grooming System',
+      features: [
+        {
+          number: '1',
+          title: 'Micro-Aerosol Engineering',
+          description: 'Controlled foam expansion in compact 25ml format.'
+        },
+        {
+          number: '2',
+          title: 'Precision Dispensing',
+          description: 'Measured output. Reduced waste. Consistent texture.'
+        },
+        {
+          number: '3',
+          title: 'Scalable Manufacturing',
+          description: 'Designed for institutional supply and brand integration.'
+        },
+        {
+          number: '4',
+          title: 'Travel-Compliant Format',
+          description: 'Optimised for airline kits, premium stays, and corporate distribution.'
+        }
+      ]
+    },
+    performance: {
+      headline: 'Engineered for Consistency.',
+      statement: 'Dense, stable foam structure maintained across usage cycles. Built for professional environments where reliability defines experience.'
+    },
+    integration: {
+      title: 'Built for Hospitality Integration',
+      description: 'Compact footprint optimises storage, presentation, and replenishment cycles. Seamless property-level deployment.',
+      highlights: [
+        'Hotels & Premium Stays',
+        'Airlines & Travel Kits',
+        'Institutional & Corporate Supply'
+      ]
+    },
+    cta: {
+      headline: 'Inquire for pricing, sampling, and supply.',
+      actions: [
+        { text: 'Contact Distribution Team', primary: true },
+        { text: 'Request Technical Overview', primary: false }
+      ]
+    }
+  },
+  
+  // Customise page data
+  customise: {
+    hero: {
+      title: 'Customised for Your Distribution Model.',
+      description: 'Pocket Grooming solutions can be adapted to meet institutional, hospitality, and corporate specifications. Engineered consistency remains — format, branding, and deployment can be tailored.'
+    },
+    capabilities: {
+      title: 'Customisation Capabilities',
+      leftColumn: [
+        'Private labelling and co-branding',
+        'Custom carton design and presentation',
+        'Institutional bulk packaging formats',
+        'Airline and travel-kit adaptation'
+      ],
+      rightColumn: [
+        'Formula alignment within regulatory standards',
+        'Region-specific compliance adjustments',
+        'Volume allocation planning',
+        'Distribution-led manufacturing schedules'
+      ]
+    },
+    process: {
+      title: 'Structured Integration Process',
+      steps: [
+        {
+          number: '01',
+          title: 'Consultation',
+          description: 'We assess your distribution requirements and volume projections.'
+        },
+        {
+          number: '02',
+          title: 'Specification',
+          description: 'Packaging, labelling, and deployment structure defined.'
+        },
+        {
+          number: '03',
+          title: 'Production',
+          description: 'Scaled manufacturing aligned with institutional timelines.'
+        }
+      ]
+    },
+    cta: {
+      headline: 'Designed Around Your Operational Model.',
+      primaryText: 'Request Customisation Brief',
+      secondaryText: 'Contact Distribution Team'
     }
   },
   

@@ -13,6 +13,7 @@
 /* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 /* Remove default margins */

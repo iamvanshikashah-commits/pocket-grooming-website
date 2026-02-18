@@ -7,6 +7,9 @@ const Product = () => {
   const { hero, quality, system, specifications, scenarios } = mockData.product;
 
   useEffect(() => {
+    // Scroll to top on page load
+    window.scrollTo(0, 0);
+
     const observerOptions = {
       threshold: 0.2,
       rootMargin: '0px'
