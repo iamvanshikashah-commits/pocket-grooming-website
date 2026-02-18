@@ -51,13 +51,13 @@ export const mockData = {
     ],
     product: {
       name: 'Pocket Shaving Foam (PSF)',
-      size: '25 ml Micro-Aerosol',
+      size: '25 ml Micro-Aerosol System',
       highlights: [
         'Dense foam output',
         'Stable consistency',
-        'Compact and travel-ready'
+        'Compact. Travel-ready.'
       ],
-      inquiry: 'Inquire for sampling & institutional supply.'
+      inquiry: 'Institutional supply & hotel partnerships available.'
     },
     useContexts: [
       {
