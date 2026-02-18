@@ -200,15 +200,15 @@ body {
 }
 
 .section-padding {
-  padding: 120px 0;
+  padding: 64px 0;
 }
 
 .section-padding-large {
-  padding: 160px 0;
+  padding: 80px 0;
 }
 
 .section-padding-small {
-  padding: 80px 0;
+  padding: 48px 0;
 }
 
 /* ============================================
@@ -224,17 +224,17 @@ body {
 
 .mt-xs { margin-top: 8px; }
 .mt-sm { margin-top: 16px; }
-.mt-md { margin-top: 24px; }
-.mt-lg { margin-top: 32px; }
-.mt-xl { margin-top: 48px; }
-.mt-xxl { margin-top: 80px; }
+.mt-md { margin-top: 20px; }
+.mt-lg { margin-top: 28px; }
+.mt-xl { margin-top: 40px; }
+.mt-xxl { margin-top: 56px; }
 
 .mb-xs { margin-bottom: 8px; }
 .mb-sm { margin-bottom: 16px; }
-.mb-md { margin-bottom: 24px; }
-.mb-lg { margin-bottom: 32px; }
-.mb-xl { margin-bottom: 48px; }
-.mb-xxl { margin-bottom: 80px; }
+.mb-md { margin-bottom: 20px; }
+.mb-lg { margin-bottom: 28px; }
+.mb-xl { margin-bottom: 40px; }
+.mb-xxl { margin-bottom: 56px; }
 
 /* ============================================
    DIVIDERS & BORDERS
@@ -297,11 +297,11 @@ body {
   }
   
   .section-padding {
-    padding: 80px 0;
+    padding: 48px 0;
   }
   
   .section-padding-large {
-    padding: 120px 0;
+    padding: 64px 0;
   }
 }
 
@@ -328,15 +328,15 @@ body {
   }
   
   .section-padding {
-    padding: 60px 0;
+    padding: 40px 0;
   }
   
   .section-padding-large {
-    padding: 80px 0;
+    padding: 56px 0;
   }
   
   .section-padding-small {
-    padding: 40px 0;
+    padding: 32px 0;
   }
   
   .btn-primary {
