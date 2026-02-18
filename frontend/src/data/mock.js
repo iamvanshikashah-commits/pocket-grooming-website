@@ -140,47 +140,78 @@ export const mockData = {
   // Micro Grooming page data
   microGrooming: {
     hero: {
-      title: 'MICRO GROOMING.',
-      subtitle: 'A system designed for movement, efficiency, and modern distribution.'
+      title: 'MICRO GROOMING',
+      subheadline: 'A precision-engineered system for compact hospitality distribution.',
+      description: 'Micro-format grooming eliminates bulk while preserving performance. Designed for modern supply chains, refined guest experiences, and scalable distribution.'
     },
-    shift: {
-      problem: {
-        title: 'The Problem',
-        points: [
-          'Bulk formats create storage and presentation challenges',
-          'Inconsistent amenity quality diminishes guest experience',
-          'Messy application wastes product and time',
-          'Traditional sizing conflicts with modern travel requirements'
-        ]
-      },
-      solution: {
-        title: 'The Solution',
-        points: [
-          'Micro-format design: compact, controlled, premium',
-          'Consistent output through precision engineering',
-          'Enhanced portability without performance compromise',
-          'Modern distribution model for institutional needs'
-        ]
-      }
+    industryShift: {
+      title: 'The Shift Toward Micro-Format Distribution',
+      columns: [
+        {
+          title: 'Reduced storage footprint',
+          description: 'Less inventory bulk. More efficient property management.'
+        },
+        {
+          title: 'Operational consistency',
+          description: 'Engineered output with controlled foam density and application.'
+        },
+        {
+          title: 'Modern presentation standards',
+          description: 'Compact, refined amenity formats aligned with contemporary hospitality.'
+        }
+      ]
     },
-    pillars: [
-      {
-        title: 'FORMAT',
-        description: 'Micro-aerosol architecture reduces footprint while maintaining premium output. 25 ml delivers optimal use-per-guest ratio. Compact design enhances presentation and storage efficiency.'
-      },
-      {
-        title: 'FLOW',
-        description: 'Controlled dispensing system ensures consistent foam density. Precision valve technology eliminates waste and maintains quality. Reliable performance from first application to last.'
-      },
-      {
-        title: 'FUNCTION',
-        description: 'Engineered for institutional integration. TSA-compliant sizing for travel contexts. Premium grooming experience in a format built for modern hospitality and distribution needs.'
-      }
-    ],
-    vision: {
-      title: 'System Vision',
-      description: 'The Micro-Aerosol System establishes a new grooming platform. Pocket Shaving Foam (PSF) is the foundation: a category-defining product that proves micro-format viability. Future releases will expand the ecosystem while maintaining the same engineering principles: compact, consistent, premium.',
-      note: 'PSF is the first release in the Pocket Grooming ecosystem.'
+    problem: {
+      title: 'Where Traditional Formats Fall Short',
+      points: [
+        'Oversised packaging increases storage inefficiency.',
+        'Inconsistent dispensing impacts guest perception.',
+        'Excess product usage leads to cost leakage.',
+        'Poor portability limits travel integration.'
+      ]
+    },
+    system: {
+      title: 'The Micro Grooming System',
+      features: [
+        {
+          number: '1',
+          title: 'Micro-Aerosol Engineering',
+          description: 'Controlled foam expansion in compact 25ml format.'
+        },
+        {
+          number: '2',
+          title: 'Precision Dispensing',
+          description: 'Measured output. Reduced waste. Consistent texture.'
+        },
+        {
+          number: '3',
+          title: 'Scalable Manufacturing',
+          description: 'Designed for institutional supply and brand integration.'
+        },
+        {
+          number: '4',
+          title: 'Travel-Compliant Format',
+          description: 'Optimised for airline kits, premium stays, and corporate distribution.'
+        }
+      ]
+    },
+    performance: {
+      headline: 'Engineered for Consistency.',
+      statement: 'Dense, stable foam structure maintained across usage cycles. Built for professional environments where reliability defines experience.'
+    },
+    integration: {
+      title: 'Built for Hospitality Integration',
+      description: 'Compact footprint optimises storage, presentation, and replenishment cycles. Seamless property-level deployment.',
+      highlights: [
+        'Hotels & Premium Stays',
+        'Airlines & Travel Kits',
+        'Institutional & Corporate Supply'
+      ]
+    },
+    cta: {
+      headline: 'Inquire for pricing, sampling, and supply.',
+      primaryText: 'Contact Distribution Team',
+      secondaryText: 'Download Technical Sheet'
     }
   },
   
