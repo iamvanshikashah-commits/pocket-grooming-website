@@ -4,7 +4,7 @@ import { mockData } from '../data/mock';
 import '../styles/MicroGrooming.css';
 
 const MicroGrooming = () => {
-  const { hero, shift, pillars, vision } = mockData.microGrooming;
+  const { hero, industryShift, problem, system, performance, integration, cta } = mockData.microGrooming;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -12,83 +12,122 @@ const MicroGrooming = () => {
 
   return (
     <div className="micro-grooming-page">
-      {/* Hero */}
-      <section className="mg-hero-section section-padding-large">
+      {/* Hero Section */}
+      <section className="mg-hero-section">
         <div className="container">
-          <h1 className="hero-large">{hero.title}</h1>
-          <p className="hero-medium mt-lg" style={{ maxWidth: '900px' }}>
-            {hero.subtitle}
-          </p>
-        </div>
-      </section>
-
-      <hr className="divider-thin" style={{ maxWidth: '1600px', margin: '0 auto' }} />
-
-      {/* The Shift - Problem/Solution */}
-      <section className="shift-section section-padding">
-        <div className="container">
-          <div className="shift-grid">
-            <div className="shift-card">
-              <h2 className="heading-2">{shift.problem.title}</h2>
-              <ul className="shift-list mt-lg">
-                {shift.problem.points.map((point, index) => (
-                  <li key={index} className="body-regular">{point}</li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="shift-card">
-              <h2 className="heading-2">{shift.solution.title}</h2>
-              <ul className="shift-list mt-lg">
-                {shift.solution.points.map((point, index) => (
-                  <li key={index} className="body-regular">{point}</li>
-                ))}
-              </ul>
+          <div className="mg-hero-content">
+            <h1 className="mg-hero-title">{hero.title}</h1>
+            <hr className="hero-divider" />
+            <p className="mg-hero-subheadline">{hero.subheadline}</p>
+            <p className="mg-hero-description">{hero.description}</p>
+            
+            <div className="mg-hero-actions">
+              <Link to="/contact" className="btn-primary-solid">
+                Request Technical Overview
+              </Link>
+              <Link to="/contact" className="btn-text-link-dark">
+                Download Product Sheet
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* FORMAT | FLOW | FUNCTION */}
-      <section className="pillars-section section-padding" style={{ background: 'var(--bg-secondary)' }}>
+      {/* Industry Shift */}
+      <section className="mg-shift-section section-padding">
         <div className="container">
-          <div className="pillars-grid">
-            {pillars.map((pillar, index) => (
-              <div key={index} className="pillar-card">
-                <div className="pillar-header">
-                  <h2 className="heading-1">{pillar.title}</h2>
-                  {index < pillars.length - 1 && <div className="pillar-divider-vert"></div>}
-                </div>
-                <p className="body-regular mt-lg">{pillar.description}</p>
+          <h2 className="mg-section-title">{industryShift.title}</h2>
+          
+          <div className="mg-shift-grid">
+            {industryShift.columns.map((column, index) => (
+              <div key={index} className="mg-shift-column">
+                <h3 className="mg-column-title">{column.title}</h3>
+                <p className="mg-column-description">{column.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* System Vision */}
-      <section className="vision-section section-padding">
+      {/* The Problem */}
+      <section className="mg-problem-section section-padding">
         <div className="container">
-          <div className="vision-content">
-            <h2 className="heading-1">{vision.title}</h2>
-            <p className="vision-description">
-              {vision.description}
-            </p>
-            <p className="vision-note">
-              {vision.note}
-            </p>
+          <div className="mg-problem-layout">
+            <div className="mg-problem-content">
+              <h2 className="mg-section-title">{problem.title}</h2>
+              <ul className="mg-problem-list">
+                {problem.points.map((point, index) => (
+                  <li key={index}>{point}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="mg-problem-visual">
+              <div className="mg-visual-placeholder"></div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="mg-cta-section section-padding" style={{ background: 'var(--bg-secondary)' }}>
+      {/* The Micro Grooming System */}
+      <section className="mg-system-section section-padding">
         <div className="container">
-          <div className="cta-content">
-            <h2 className="hero-medium">Ready to explore Micro Grooming?</h2>
-            <Link to="/contact" className="btn-primary mt-xl">
-              Inquire Now
-            </Link>
+          <h2 className="mg-section-title text-center">{system.title}</h2>
+          
+          <div className="mg-system-grid">
+            {system.features.map((feature, index) => (
+              <div key={index} className="mg-system-block">
+                <div className="mg-system-number">{feature.number}</div>
+                <h3 className="mg-system-feature-title">{feature.title}</h3>
+                <p className="mg-system-feature-desc">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Performance Statement */}
+      <section className="mg-performance-section">
+        <div className="container">
+          <div className="mg-performance-content">
+            <div className="mg-performance-watermark">01</div>
+            <h2 className="mg-performance-headline">{performance.headline}</h2>
+            <blockquote className="mg-performance-statement">
+              {performance.statement}
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      {/* Integration */}
+      <section className="mg-integration-section section-padding">
+        <div className="container">
+          <h2 className="mg-section-title">{integration.title}</h2>
+          <p className="mg-integration-description">{integration.description}</p>
+          
+          <div className="mg-integration-highlights">
+            {integration.highlights.map((highlight, index) => (
+              <div key={index} className="mg-highlight-item">
+                {highlight}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technical CTA */}
+      <section className="mg-cta-section section-padding-small">
+        <div className="container">
+          <div className="mg-cta-content">
+            <h2 className="mg-cta-headline">{cta.headline}</h2>
+            
+            <div className="mg-cta-actions">
+              <Link to="/contact" className="btn-primary-solid">
+                {cta.primaryText}
+              </Link>
+              <Link to="/contact" className="btn-secondary-outline">
+                {cta.secondaryText}
+              </Link>
+            </div>
           </div>
         </div>
       </section>
