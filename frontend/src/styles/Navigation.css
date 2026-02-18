@@ -3,25 +3,22 @@
 .navigation-header {
   background: var(--bg-primary);
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  padding: 20px 0;
+  padding: 0;
   position: sticky;
   top: 0;
   z-index: 100;
   transition: all 0.3s ease;
-  height: 70px;
-  display: flex;
-  align-items: center;
 }
 
 .navigation-header.scrolled {
-  padding: 16px 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .navigation-container {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 0 80px 0 56px;
+  padding: 0 80px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -141,7 +138,7 @@
 
 @media (max-width: 640px) {
   .navigation-container {
-    padding: 0 20px 0 20px;
+    padding: 0 20px;
   }
 
   .logo-image {
