@@ -161,14 +161,10 @@ export const mockData = {
         }
       ]
     },
-    problem: {
-      title: 'Where Traditional Formats Fall Short',
-      points: [
-        'Oversised packaging increases storage inefficiency.',
-        'Inconsistent dispensing impacts guest perception.',
-        'Excess product usage leads to cost leakage.',
-        'Poor portability limits travel integration.'
-      ]
+    vision: {
+      title: 'System Vision',
+      description: 'The Micro-Aerosol System establishes a new grooming platform for modern distribution. Pocket Shaving Foam (PSF) serves as the foundation, validating the viability of micro-format engineering. Future releases will expand the ecosystem while maintaining the same principles: compact design, consistent output, premium execution.',
+      statement: 'PSF is the inaugural release in the evolving Pocket Grooming system.'
     },
     system: {
       title: 'The Micro Grooming System',
@@ -210,8 +206,10 @@ export const mockData = {
     },
     cta: {
       headline: 'Inquire for pricing, sampling, and supply.',
-      primaryText: 'Contact Distribution Team',
-      secondaryText: 'Download Technical Sheet'
+      actions: [
+        { text: 'Contact Distribution Team', primary: true },
+        { text: 'Request Technical Overview', primary: false }
+      ]
     }
   },
   
