@@ -2,16 +2,19 @@
 
 .navigation-header {
   background: var(--bg-primary);
-  border-bottom: 1px solid var(--border-light);
-  padding: 28px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 20px 0;
   position: sticky;
   top: 0;
   z-index: 100;
   transition: all 0.3s ease;
+  height: 70px;
+  display: flex;
+  align-items: center;
 }
 
 .navigation-header.scrolled {
-  padding: 20px 0;
+  padding: 16px 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
@@ -36,7 +39,7 @@
 }
 
 .logo-image {
-  height: 42px;
+  height: 38px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -47,7 +50,7 @@
 .navigation-menu {
   display: flex;
   align-items: center;
-  gap: 48px;
+  gap: 32px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -56,7 +59,7 @@
 .navigation-link {
   color: var(--text-primary);
   text-decoration: none;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   padding: 8px 0;
   position: relative;
@@ -142,7 +145,7 @@
   }
 
   .logo-image {
-    height: 32px;
+    height: 30px;
   }
 
   .mobile-menu {
