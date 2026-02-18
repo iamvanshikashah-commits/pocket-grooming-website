@@ -30,7 +30,7 @@ export const mockData = {
     },
     category: {
       title: 'A new format. Designed for modern movement.',
-      description: 'Micro-format grooming eliminates bulk while maximizing control. Compact engineering meets consistent output for portability without compromise. Built for modern distribution needs and refined guest experiences.'
+      description: 'Micro-format grooming eliminates bulk while maximising control. Compact engineering meets consistent output for portability without compromise. Built for modern distribution needs and refined guest experiences.'
     },
     systemPoints: [
       {
@@ -46,7 +46,7 @@ export const mockData = {
       {
         number: '3',
         title: 'Built for Hospitality Integration',
-        description: 'Designed for seamless property integration. Compact footprint optimizes inventory and presentation. Premium amenity experience that aligns with modern hospitality standards.'
+        description: 'Designed for seamless property integration. Compact footprint optimises inventory and presentation. Premium amenity experience that aligns with modern hospitality standards.'
       }
     ],
     product: {
@@ -124,7 +124,7 @@ export const mockData = {
     scenarios: [
       {
         title: 'Guest Room Integration',
-        benefit: 'Premium amenity that optimizes bathroom space and enhances presentation.'
+        benefit: 'Premium amenity that optimises bathroom space and enhances presentation.'
       },
       {
         title: 'Travel Kit Inclusion',
