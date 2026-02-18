@@ -15,6 +15,7 @@ export const mockData = {
     { label: 'Home', path: '/' },
     { label: 'Product', path: '/product' },
     { label: 'Micro Grooming', path: '/micro-grooming' },
+    { label: 'Customise', path: '/customise' },
     { label: 'About', path: '/about' },
     { label: 'Contact', path: '/contact' }
   ],
