@@ -4,7 +4,7 @@ import { mockData } from '../data/mock';
 import '../styles/MicroGrooming.css';
 
 const MicroGrooming = () => {
-  const { hero, industryShift, problem, system, performance, integration, cta } = mockData.microGrooming;
+  const { hero, industryShift, vision, system, performance, integration, cta } = mockData.microGrooming;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -20,15 +20,6 @@ const MicroGrooming = () => {
             <hr className="hero-divider" />
             <p className="mg-hero-subheadline">{hero.subheadline}</p>
             <p className="mg-hero-description">{hero.description}</p>
-            
-            <div className="mg-hero-actions">
-              <Link to="/contact" className="btn-primary-solid">
-                Request Technical Overview
-              </Link>
-              <Link to="/contact" className="btn-text-link-dark">
-                Download Product Sheet
-              </Link>
-            </div>
           </div>
         </div>
       </section>
@@ -49,21 +40,14 @@ const MicroGrooming = () => {
         </div>
       </section>
 
-      {/* The Problem */}
-      <section className="mg-problem-section section-padding">
+      {/* System Vision */}
+      <section className="mg-vision-section section-padding">
         <div className="container">
-          <div className="mg-problem-layout">
-            <div className="mg-problem-content">
-              <h2 className="mg-section-title">{problem.title}</h2>
-              <ul className="mg-problem-list">
-                {problem.points.map((point, index) => (
-                  <li key={index}>{point}</li>
-                ))}
-              </ul>
-            </div>
-            <div className="mg-problem-visual">
-              <div className="mg-visual-placeholder"></div>
-            </div>
+          <h2 className="mg-section-title">{vision.title}</h2>
+          <p className="mg-vision-description">{vision.description}</p>
+          
+          <div className="mg-vision-statement">
+            <p className="mg-statement-text">{vision.statement}</p>
           </div>
         </div>
       </section>
@@ -121,12 +105,15 @@ const MicroGrooming = () => {
             <h2 className="mg-cta-headline">{cta.headline}</h2>
             
             <div className="mg-cta-actions">
-              <Link to="/contact" className="btn-primary-solid">
-                {cta.primaryText}
-              </Link>
-              <Link to="/contact" className="btn-secondary-outline">
-                {cta.secondaryText}
-              </Link>
+              {cta.actions.map((action, index) => (
+                <Link 
+                  key={index}
+                  to="/contact" 
+                  className={action.primary ? 'btn-primary-solid' : 'btn-secondary-outline'}
+                >
+                  {action.text}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
