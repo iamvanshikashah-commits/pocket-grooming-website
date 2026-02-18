@@ -214,6 +214,54 @@ export const mockData = {
     }
   },
   
+  // Customise page data
+  customise: {
+    hero: {
+      title: 'Customised for Your Distribution Model.',
+      description: 'Pocket Grooming solutions can be adapted to meet institutional, hospitality, and corporate specifications. Engineered consistency remains — format, branding, and deployment can be tailored.'
+    },
+    capabilities: {
+      title: 'Customisation Capabilities',
+      leftColumn: [
+        'Private labelling and co-branding',
+        'Custom carton design and presentation',
+        'Institutional bulk packaging formats',
+        'Airline and travel-kit adaptation'
+      ],
+      rightColumn: [
+        'Formula alignment within regulatory standards',
+        'Region-specific compliance adjustments',
+        'Volume allocation planning',
+        'Distribution-led manufacturing schedules'
+      ]
+    },
+    process: {
+      title: 'Structured Integration Process',
+      steps: [
+        {
+          number: '01',
+          title: 'Consultation',
+          description: 'We assess your distribution requirements and volume projections.'
+        },
+        {
+          number: '02',
+          title: 'Specification',
+          description: 'Packaging, labelling, and deployment structure defined.'
+        },
+        {
+          number: '03',
+          title: 'Production',
+          description: 'Scaled manufacturing aligned with institutional timelines.'
+        }
+      ]
+    },
+    cta: {
+      headline: 'Designed Around Your Operational Model.',
+      primaryText: 'Request Customisation Brief',
+      secondaryText: 'Contact Distribution Team'
+    }
+  },
+  
   // About page data
   about: {
     hero: {
