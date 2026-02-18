@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { mockData } from '../data/mock';
@@ -6,6 +6,10 @@ import '../styles/Home.css';
 
 const Home = () => {
   const { hero, category, systemPoints, product, useContexts, trust } = mockData.home;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const scrollToMicroGrooming = (e) => {
     e.preventDefault();

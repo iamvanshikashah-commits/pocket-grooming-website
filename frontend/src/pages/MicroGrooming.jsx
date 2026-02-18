@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { mockData } from '../data/mock';
 import '../styles/MicroGrooming.css';
 
 const MicroGrooming = () => {
   const { hero, shift, pillars, vision } = mockData.microGrooming;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="micro-grooming-page">

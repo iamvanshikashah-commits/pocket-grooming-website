@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { mockData } from '../data/mock';
 import '../styles/About.css';
 
 const About = () => {
   const { hero, heritage, capability, pocket } = mockData.about;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="about-page">
