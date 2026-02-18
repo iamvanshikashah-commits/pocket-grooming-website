@@ -501,6 +501,23 @@
     background: rgba(0, 0, 0, 0.35);
   }
 
+  .product-hero-layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .product-hero-heading {
+    font-size: 40px;
+  }
+
+  .product-hero-subheading {
+    font-size: 18px;
+  }
+
+  .product-hero-image-wrapper {
+    width: 100%;
+  }
+
   .product-preview-grid {
     grid-template-columns: 1fr;
     gap: 48px;
