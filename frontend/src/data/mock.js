@@ -304,10 +304,13 @@ export const mockData = {
   // Contact form options
   contactForm: {
     requirementOptions: [
-      'Hotels',
-      'Airlines',
+      'Hotel',
+      'Resort',
+      'Airline',
+      'Airport Lounge',
       'Corporate Gifting',
-      'Institutional',
+      'Wedding Gifting',
+      'Distributor / Bulk Buyer',
       'Other'
     ]
   }
