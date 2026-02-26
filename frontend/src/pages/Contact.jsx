@@ -34,30 +34,41 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Mock submission - will be replaced with backend API
-    setTimeout(() => {
-      mockData.contactSubmissions.push({
-        ...formData,
-        submittedAt: new Date().toISOString()
+    try {
+      const formElement = e.target;
+      const formDataToSend = new FormData(formElement);
+
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formDataToSend
       });
 
-      toast.success('Thanks — we\'ve received your inquiry. Our team will reach out shortly.');
-      
-      // Reset form
-      setFormData({
-        name: '',
-        company: '',
-        role: '',
-        email: '',
-        phone: '',
-        city: '',
-        requirement: '',
-        message: '',
-        requestSamples: false
-      });
+      const result = await response.json();
 
+      if (result.success) {
+        toast.success('Thanks — we\'ve received your inquiry. Our team will reach out within 24–48 hours.');
+        
+        // Reset form
+        setFormData({
+          name: '',
+          company: '',
+          role: '',
+          email: '',
+          phone: '',
+          city: '',
+          requirement: '',
+          message: '',
+          requestSamples: false
+        });
+      } else {
+        toast.error('Something went wrong. Please try again or contact us directly.');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast.error('Something went wrong. Please try again or contact us directly.');
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -125,7 +136,19 @@ const Contact = () => {
 
             {/* Right Column - Form */}
             <div className="contact-form-column">
-              <form onSubmit={handleSubmit} className="contact-form">
+              <form 
+                onSubmit={handleSubmit} 
+                className="contact-form"
+                action="https://api.web3forms.com/submit"
+                method="POST"
+              >
+                {/* Web3Forms Access Key */}
+                <input 
+                  type="hidden" 
+                  name="access_key" 
+                  value="244ab061-a960-4fba-85f1-5a89ad06afd0" 
+                />
+
                 <div className="form-grid">
                   <div className="form-group">
                     <label htmlFor="name" className="form-label">Name *</label>
@@ -216,7 +239,7 @@ const Contact = () => {
                   <label htmlFor="requirement" className="form-label">Requirement Type *</label>
                   <select
                     id="requirement"
-                    name="requirement"
+                    name="requirementType"
                     value={formData.requirement}
                     onChange={handleChange}
                     required
@@ -247,6 +270,7 @@ const Contact = () => {
                     <input
                       type="checkbox"
                       name="requestSamples"
+                      value="yes"
                       checked={formData.requestSamples}
                       onChange={handleChange}
                       className="form-checkbox-input"
