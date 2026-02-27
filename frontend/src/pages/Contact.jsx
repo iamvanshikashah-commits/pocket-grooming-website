@@ -245,7 +245,7 @@ const Contact = () => {
                     required
                     className="form-select"
                   >
-                    <option value="">Select requirement type</option>
+                    <option value="" disabled>Select requirement type</option>
                     {mockData.contactForm.requirementOptions.map((option, index) => (
                       <option key={index} value={option}>{option}</option>
                     ))}
