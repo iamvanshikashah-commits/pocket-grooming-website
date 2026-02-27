@@ -34,30 +34,41 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Mock submission - will be replaced with backend API
-    setTimeout(() => {
-      mockData.contactSubmissions.push({
-        ...formData,
-        submittedAt: new Date().toISOString()
+    try {
+      const formElement = e.target;
+      const formDataToSend = new FormData(formElement);
+
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formDataToSend
       });
 
-      toast.success('Thank you! We\'ll respond within 1–2 business days.');
-      
-      // Reset form
-      setFormData({
-        name: '',
-        company: '',
-        role: '',
-        email: '',
-        phone: '',
-        city: '',
-        requirement: '',
-        message: '',
-        requestSamples: false
-      });
+      const result = await response.json();
 
+      if (result.success) {
+        toast.success('Thanks — we\'ve received your inquiry. Our team will reach out within 24–48 hours.');
+        
+        // Reset form
+        setFormData({
+          name: '',
+          company: '',
+          role: '',
+          email: '',
+          phone: '',
+          city: '',
+          requirement: '',
+          message: '',
+          requestSamples: false
+        });
+      } else {
+        toast.error('Something went wrong. Please try again or contact us directly.');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast.error('Something went wrong. Please try again or contact us directly.');
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -65,173 +76,224 @@ const Contact = () => {
       {/* Hero */}
       <section className="contact-hero-section section-padding">
         <div className="container">
-          <h1 className="hero-medium text-center">Get in touch.</h1>
-          <p className="body-large mt-md text-center" style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '16px auto 0' }}>
-            For sampling, pricing, and supply inquiries.
+          <h1 className="contact-hero-title">Get in touch.</h1>
+          <p className="contact-hero-subtitle">
+            For sampling, pricing, custom branding, and institutional supply inquiries.
+          </p>
+          <p className="contact-hero-note">
+            We typically respond within 24–48 hours.
           </p>
         </div>
       </section>
 
-      {/* Contact Form */}
-      <section className="contact-form-section section-padding-small">
+      {/* Two Column Layout */}
+      <section className="contact-content-section">
         <div className="container">
-          <div className="form-wrapper">
-            <form onSubmit={handleSubmit} className="contact-form">
-              <div className="form-grid">
-                <div className="form-group">
-                  <label htmlFor="name" className="form-label">Name *</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="form-input"
-                    placeholder="Your full name"
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="company" className="form-label">Company *</label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    required
-                    className="form-input"
-                    placeholder="Company name"
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="role" className="form-label">Role *</label>
-                  <input
-                    type="text"
-                    id="role"
-                    name="role"
-                    value={formData.role}
-                    onChange={handleChange}
-                    required
-                    className="form-input"
-                    placeholder="Your role"
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="email" className="form-label">Email *</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="form-input"
-                    placeholder="email@company.com"
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="phone" className="form-label">Phone *</label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    required
-                    className="form-input"
-                    placeholder="+91 XXXXX XXXXX"
-                  />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="city" className="form-label">City *</label>
-                  <input
-                    type="text"
-                    id="city"
-                    name="city"
-                    value={formData.city}
-                    onChange={handleChange}
-                    required
-                    className="form-input"
-                    placeholder="City"
-                  />
-                </div>
+          <div className="contact-layout">
+            {/* Left Column - Company Info */}
+            <div className="contact-info-column">
+              {/* Company Card */}
+              <div className="info-card">
+                <h3 className="info-card-title">Jaivanti Cosmetics Pvt. Ltd. (JCOS)</h3>
+                <p className="info-card-meta">Established: 1990 • Kolkata</p>
+                <p className="info-card-text">
+                  <strong>About:</strong> Manufacturers of hotel-grade toiletries and grooming essentials.
+                </p>
+                <p className="info-card-text">
+                  <strong>Manufacturing Licence:</strong> AL-925 (M)
+                </p>
               </div>
 
-              <div className="form-group mt-lg">
-                <label htmlFor="requirement" className="form-label">Requirement Type *</label>
-                <select
-                  id="requirement"
-                  name="requirement"
-                  value={formData.requirement}
-                  onChange={handleChange}
-                  required
-                  className="form-select"
-                >
-                  <option value="">Select requirement type</option>
-                  {mockData.contactForm.requirementOptions.map((option, index) => (
-                    <option key={index} value={option}>{option}</option>
-                  ))}
-                </select>
+              {/* Address Card */}
+              <div className="info-card">
+                <h3 className="info-card-title">Address</h3>
+                <p className="info-card-text">
+                  14, Ganesh Chandra Avenue<br />
+                  KGN House, Near Mission Café<br />
+                  Mezzanine Floor<br />
+                  Kolkata – 700013
+                </p>
               </div>
 
-              <div className="form-group mt-lg">
-                <label htmlFor="message" className="form-label">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows="6"
-                  className="form-textarea"
-                  placeholder="Tell us about your requirements..."
-                ></textarea>
-              </div>
+              {/* Direct Contacts Card */}
+              <div className="info-card">
+                <h3 className="info-card-title">Direct Contacts</h3>
+                
+                <div className="contact-entry">
+                  <p className="contact-name">Jayant Shah</p>
+                  <p className="contact-role">Director</p>
+                  <p className="contact-detail">+91 98300 85235</p>
+                  <p className="contact-detail">jayantshah65@gmail.com</p>
+                </div>
 
-              <div className="form-group mt-lg">
-                <label className="checkbox-label">
-                  <input
-                    type="checkbox"
-                    name="requestSamples"
-                    checked={formData.requestSamples}
+                <div className="contact-entry">
+                  <p className="contact-name">Vanshika Shah</p>
+                  <p className="contact-role">Product Development & Marketing</p>
+                  <p className="contact-detail">+91 90512 78459</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column - Form */}
+            <div className="contact-form-column">
+              <form 
+                onSubmit={handleSubmit} 
+                className="contact-form"
+                action="https://api.web3forms.com/submit"
+                method="POST"
+              >
+                {/* Web3Forms Access Key */}
+                <input 
+                  type="hidden" 
+                  name="access_key" 
+                  value="244ab061-a960-4fba-85f1-5a89ad06afd0" 
+                />
+
+                <div className="form-grid">
+                  <div className="form-group">
+                    <label htmlFor="name" className="form-label">Name *</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                      className="form-input"
+                      placeholder="Your full name"
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="company" className="form-label">Company *</label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleChange}
+                      required
+                      className="form-input"
+                      placeholder="Company name"
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="role" className="form-label">Role *</label>
+                    <input
+                      type="text"
+                      id="role"
+                      name="role"
+                      value={formData.role}
+                      onChange={handleChange}
+                      required
+                      className="form-input"
+                      placeholder="Your role"
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="email" className="form-label">Email *</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      className="form-input"
+                      placeholder="email@company.com"
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="phone" className="form-label">Phone *</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      required
+                      className="form-input"
+                      placeholder="+91 XXXXX XXXXX"
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="city" className="form-label">City *</label>
+                    <input
+                      type="text"
+                      id="city"
+                      name="city"
+                      value={formData.city}
+                      onChange={handleChange}
+                      required
+                      className="form-input"
+                      placeholder="City"
+                    />
+                  </div>
+                </div>
+
+                <div className="form-group mt-lg">
+                  <label htmlFor="requirement" className="form-label">Requirement Type *</label>
+                  <select
+                    id="requirement"
+                    name="requirementType"
+                    value={formData.requirement}
                     onChange={handleChange}
-                    className="form-checkbox"
-                  />
-                  <span className="body-regular">Request samples</span>
-                </label>
-              </div>
+                    required
+                    className="form-select"
+                  >
+                    <option value="">Select requirement type</option>
+                    {mockData.contactForm.requirementOptions.map((option, index) => (
+                      <option key={index} value={option}>{option}</option>
+                    ))}
+                  </select>
+                </div>
 
-              <div className="mt-xl">
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="btn-primary"
-                  style={{ width: '100%' }}
-                >
-                  {isSubmitting ? 'Submitting...' : 'Submit Inquiry'}
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
+                <div className="form-group mt-lg">
+                  <label htmlFor="message" className="form-label">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows="5"
+                    className="form-textarea"
+                    placeholder="Tell us about your requirements..."
+                  ></textarea>
+                </div>
 
-      {/* Contact Info */}
-      <section className="contact-info-section section-padding-small" style={{ background: 'var(--bg-secondary)' }}>
-        <div className="container">
-          <div className="contact-info-content">
-            <h2 className="heading-3">Direct Contact</h2>
-            <p className="body-regular mt-md">
-              For urgent inquiries or specific questions, reach out directly to our institutional supply team.
-            </p>
-            <p className="body-small mt-lg" style={{ color: 'var(--text-secondary)' }}>
-              Response time: 1–2 business days
-            </p>
+                <div className="form-group mt-lg">
+                  <label className="checkbox-row">
+                    <input
+                      type="checkbox"
+                      name="requestSamples"
+                      value="yes"
+                      checked={formData.requestSamples}
+                      onChange={handleChange}
+                      className="form-checkbox-input"
+                    />
+                    <span className="checkbox-label-text">Request samples</span>
+                  </label>
+                </div>
+
+                <div className="form-submit-section">
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="btn-primary-solid"
+                    style={{ width: '100%' }}
+                  >
+                    {isSubmitting ? 'Sending...' : 'Send Inquiry'}
+                  </button>
+                  <p className="form-privacy-note">
+                    We'll only use your details to respond to this inquiry.
+                  </p>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </section>
