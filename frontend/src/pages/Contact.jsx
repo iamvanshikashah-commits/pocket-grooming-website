@@ -240,7 +240,7 @@ const Contact = () => {
                   <select
                     id="requirement"
                     name="requirementType"
-                    value={formData.requirement}
+                    value={formData.requirementType}
                     onChange={handleChange}
                     required
                     className="form-select"
