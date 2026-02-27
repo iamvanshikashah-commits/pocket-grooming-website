@@ -56,7 +56,7 @@ const Contact = () => {
           email: '',
           phone: '',
           city: '',
-          requirement: '',
+          requirementType: '',
           message: '',
           requestSamples: false
         });
